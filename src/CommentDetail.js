@@ -1,7 +1,6 @@
 import React from "react";
-import faker from "faker";
 
-const CommentDetail = (props) => {
+const CommentDetail = props => {
   return (
     <div className="comment">
       <a href="/" className="avatar">
@@ -12,13 +11,14 @@ const CommentDetail = (props) => {
           {props.author}
         </a>
         <div className="metadata">
-          <span className="date">Today at {faker.random.number()} PM</span>
+          <span className="date">Today at {props.time} PM</span>
         </div>
         <div className="text">{props.cmt}</div>
       </div>
+
+      
     </div>
   );
 };
-
 
 export default CommentDetail;
